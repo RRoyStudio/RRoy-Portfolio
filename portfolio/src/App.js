@@ -13,6 +13,7 @@ function HomePage() {
     <div className="HomePage">
       <Navbar className="nav" />
       <Header className="header" />
+      <Software className="software" />
       <Footer className="footer"/>
       
     </div>
