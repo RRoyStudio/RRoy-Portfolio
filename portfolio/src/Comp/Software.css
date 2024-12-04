@@ -1,0 +1,92 @@
+
+
+
+tbody, tr, td, th{
+    background-color: transparent;
+    border: none;
+}
+
+
+table{
+    rotate: -10deg;
+    background-color: transparent;
+    padding: 1vw;
+    margin-top: 0;
+    font-size: .8vw;
+    position: relative;
+    left: 1vw;
+
+    @media screen and (max-width: 500px) {
+        font-size: 1.5vw;
+        position: relative;
+        left: .5vw;
+    }
+}
+
+
+
+th, td {
+        border-collapse: "collapse";
+        padding: .5vw;
+}
+
+
+.adobe-table{
+    border: none;
+    background-color: transparent;
+    
+}
+
+.colmn1{
+    margin-bottom: 0;
+    font-size: 1.5vw;
+    border: purple solid 5px;
+    width: 1fr;
+}
+
+.colmn1-container{
+    background-color: white;
+    border: blue solid 5px;
+    width: fit-content ;
+    border-radius: 50%;
+    height:20vw;
+    padding: 1vw;
+    align-content: center;
+    rotate: 20deg;
+    margin-left: 12vw;
+    margin-bottom: 3vw;
+    
+    
+    @media screen and (max-width: 500px) {
+        height: 30vw;
+        width: 20vw;
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        left: 2vw;
+    }
+    
+}
+
+.adobe-h2 {
+    padding: 1vw;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+    rotate: -20deg;
+    width:fit-content;
+    background-color: transparent;
+    
+
+    @media screen and (max-width: 500px) {
+        font-size: 2.5vw;
+        position: relative;
+        left: 2vw;
+    }
+}
+
+.software-h2{
+    margin: 2vw;
+    font-size: 3vw;
+}
