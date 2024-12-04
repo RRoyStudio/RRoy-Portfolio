@@ -1,4 +1,4 @@
-.nav .container {
+.nav-container {
 	border: #F8E4CA solid 1vw;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -9,18 +9,18 @@
 }
 
 
-.nav .colmn1 {
+.nav-colmn1 {
 	width: 1fr;
 	background-color: white;
 }
 
-.nav .colmn2 {
+.nav-colmn2 {
 	width: 1fr;
 	align-content: center;
 	background-color: white;
 }
 
-.nav .colmn1 img {
+.nav-colmn1 img {
 	height: 5vw;
 	margin: 1vw;
 	background-color: white;
@@ -31,7 +31,7 @@
 	}
 };
 
-.nav button {
+button {
 	background-color: white;
 	outline: none;
 	border: none;
@@ -39,7 +39,7 @@
 }
 
 
-.nav .hamburger {
+.hamburger {
 	float: right;
 	margin: 1vw;
 	background-color: white;
@@ -50,7 +50,7 @@
 	}
 }
 
-.nav .hamburger img {
+.hamburger img {
 	width: 10vw;
 	height: auto;
 	background-color: white;

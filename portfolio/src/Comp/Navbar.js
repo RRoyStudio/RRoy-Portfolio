@@ -12,11 +12,11 @@ function Navbar() {
 
     return (
         <div className="nav">
-            <div className="container">
-                <div className= 'colmn1'>
+            <div className="nav-container">
+                <div className= 'nav-colmn1'>
                     <img src={RRicon} alt="RR" />
                 </div>
-                <div className= 'colmn2'>
+                <div className= 'nav-colmn2'>
                     <button onClick={() => headerLinks.classList.toggle('open')} className="hamburger" id='hamburger'><img src={hamburgericon} alt="hamburger menu" /></button>
                     <ul id='header_links'>    
                         <li>Home</li>    
