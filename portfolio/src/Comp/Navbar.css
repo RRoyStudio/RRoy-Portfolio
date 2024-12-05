@@ -1,73 +1,64 @@
+:root {
+	--color1: #F38C0C ; /*Yellow*/
+	--color2: #E72F17 ; /*Red*/
+	--color3: #3B898D; /*Teal*/
+	--random-color: var(--color1);
+}
+
+/* Main container */
 .nav-container {
 	border: #F8E4CA solid 1vw;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr;
-	grid-template-areas: "colmn1 colmn2";
+	grid-template-columns: repeat(2, 1fr);
 	height: fit-content;
-	position: sticky;
-}
-
-
-.nav-colmn1 {
-	width: 1fr;
 	background-color: white;
 }
 
+/* Column styles */
+.nav-colmn1,
 .nav-colmn2 {
-	width: 1fr;
-	align-content: center;
+	width: 100%;
 	background-color: white;
+	align-content: center;
 }
 
+/* Logo image */
 .nav-colmn1 img {
 	height: 5vw;
 	margin: 1vw;
 	background-color: white;
-
-	@media screen and (max-width: 500px) {
-		width: 15vw;
-		height: auto;
-	}
-};
-
-button {
-	background-color: white;
-	outline: none;
-	border: none;
-
 }
 
+/* Button reset */
+button {
+	background-color: white;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
 
+/* Hamburger menu */
 .hamburger {
+	display: none;
 	float: right;
 	margin: 1vw;
 	background-color: white;
-	display: none;
-	border: none;
-	@media screen and (max-width: 500px) {
-		display: block;
-	}
 }
 
 .hamburger img {
 	width: 10vw;
 	height: auto;
 	background-color: white;
-	border: none;
 }
 
-
+/* Navigation list */
 .nav ul {
 	list-style-type: none;
 	margin: 1vw;
 	float: right;
 	background-color: white;
 	display: block;
-
-	@media screen and (max-width: 500px) {
-		display: none;
-	}
+	text-decoration: none;
 }
 
 .nav li {
@@ -76,16 +67,107 @@ button {
 	background-color: white;
 }
 
+.nav li a {
+    text-decoration: none;
+	color: black;
+    background-color: white;  /* Change text color */
+    font-size: 1.2rem;  /* Change font size */
+    font-weight: 500;  /* Change font weight */
+	padding:.5vw;
+    transition: color 0.3s ease;  /* Smooth color transition on hover */
+}
+
+.nav li a:hover {
+	color: var(--random-color);
+	animation: colorChange 0.3s forwards;
+}
+@keyframes colorChange {
+	100%{
+		color: var(--random-color);
+	}
+}
+
+
+/* For active/current page link */
+.nav li a.active {
+	color: var(--random-color);
+    animation: colorChange 0.3s forwards;
+}
+@keyframes colorChange {
+	100%{
+		color: var(--random-color);
+	}
+}
+
+/* Header links states */
 .nav .headerlinks {
 	display: none;
+	position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background: white;
+    z-index: 100;
+    padding: 1rem;
+    border-top: none;
 }
 
 .nav .header_links.open {
 	display: block;
 }
 
-/* Clear floats after the columns */
-.nav .row:after {
+/* Media queries */
+@media screen and (max-width: 768px) {
+	
+	
+	.nav-colmn1 img {
+		width: 15vw;
+		height: auto;
+	}
+
+	.hamburger {
+		display: block;
+	}
+
+	.nav ul {
+		display: none;
+	}
+
+	li {
+		width: 100%;
+		padding: 20px;
+		text-align: center;
+		margin: 10px 0;
+		border-radius: 8px;
+		background: #f8f8f8;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+		transform: translateX(0);
+		transition: transform 0.3s ease, background-color 0.3s ease;
+		}
+	
+	li:hover {
+		background-color: #fff;
+		transform: translateX(10px);
+		animation: colorChange 0.3s forwards;
+		color: var(--random-color);
+	}
+	@keyframes colorChange {
+		100%{
+			color: var(--random-color);
+		}
+		}
+	
+	li a {
+		display: block;
+		font-weight: 600;
+		color: #333;
+		font-size: 1.1rem;
+		}
+
+}
+
+/* Clearfix */
+.nav .row::after {
 	content: "";
 	display: table;
 	clear: both;

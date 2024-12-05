@@ -1,4 +1,6 @@
-
+.nav{
+    position: sticky;
+}
 
 .footer{
     bottom: .5vw;
