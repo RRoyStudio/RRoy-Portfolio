@@ -11,7 +11,7 @@ function Navbar() {
 
     const navLinks = ['Home', 'About', 'Projects', 'Contact'];
 
-    const colors = ['--color1', '--color2', '--color3', '--color4'];
+    const colors = ['--color1', '--color2', '--color3'];
 
     const [currentColorIndex, setCurrentColorIndex] = useState(0);
     function setRandomColor() {
