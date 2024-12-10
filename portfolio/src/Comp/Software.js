@@ -12,12 +12,26 @@ const adobe_programs = [
 ];
 
 const development_tools = [
-  "Visual Studio Code",
-  "GitHub",
+  "HTML",
+  "CSS",
+  "Javascript",
+  "PHP",
   "React",
-  "Node.js",
-  "MongoDB"
+  "SQL"
 ];
+
+const design_tools = [
+ "Figma",
+ "WordPress",
+ "Elementor",
+ "GitHub",
+ "Google Analytics",
+ "Google Search Console",
+ "HubSpot",
+ "WooCommerce",
+ "Shopify",
+ "SAP B1"
+]; 
 
 const AdobeList = () => (
   <div className="adobe-grid">
@@ -39,38 +53,52 @@ const DevelopmentTools = () => (
   </div>
 );
 
+const DesignTools = () => (
+  <div className="design-grid">
+    {design_tools.map((tool) => (
+      <div key={tool} className="design-item">
+        {tool}
+      </div>
+    ))}
+  </div>
+);
+
 
 function Software() {
   // ContentSection component
-  const ContentSection = ({ title, children }) => {
+  const ContentSection = ({ title, children, className }) => {
     return (
-      <div className="colmn1">
-        <div className="colmn1-container">
-          <h2 className="adobe-h2">{title}</h2>
+      <div className={`colmn ${className} || ''}`}>
+        <div className="colmn-container">
+          <h2 className="software-h2">{title}</h2>
           {children}
         </div>
       </div>
     );
   };
+
   
   return (
     <div className="Software">
       <div className="container">
+      <h2 className="content-h2">Software</h2>
         <div className="row">
-          <h2 className="software-h2">Software</h2>
           
-          <ContentSection title="Adobe">
+          {/* Adobe sticker */}
+          <ContentSection title="Adobe" className='adobe-section'>
             <AdobeList />
           </ContentSection>
-  
-          <ContentSection title="Development">
-            <DevelopmentTools />
+
+          {/* Development sticker */}
+          <ContentSection title="Development" className='dev-section'>
+           <DevelopmentTools /> 
           </ContentSection>
-  
-          <ContentSection title="Design">
-            
-          
+
+          {/* Design sticker */}
+          <ContentSection title="Design" className='design-section'>
+            <DesignTools />
           </ContentSection>
+
         </div>
       </div>
     </div>

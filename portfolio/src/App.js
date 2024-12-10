@@ -17,7 +17,9 @@ function HomePage() {
       <PageWrapper/>
       <Header className="header" />
       <Software className="software" />
+      <Projects className="projects" />
       <PageWrapper/>
+    
       <Footer className="footer"/>
       
     </div>

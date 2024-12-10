@@ -5,21 +5,28 @@
 	--random-color: var(--color1);
 }
 
+.nav{
+	display:flex;
+	width:100%;
+}
+
 /* Main container */
 .nav-container {
 	border: #F8E4CA solid 1vw;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	height: fit-content;
 	background-color: white;
+	width: 100%;
+	align-items: center;
 }
+
+
 
 /* Column styles */
 .nav-colmn1,
 .nav-colmn2 {
-	width: 100%;
 	background-color: white;
-	align-content: center;
+	
 }
 
 /* Logo image */
@@ -117,8 +124,13 @@ button {
 }
 
 /* Media queries */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
 	
+	.nav{
+		display:flex;
+		width:1fr;
+		overflow: hidden;
+	}
 	
 	.nav-colmn1 img {
 		width: 15vw;
@@ -134,7 +146,7 @@ button {
 	}
 
 	li {
-		width: 100%;
+		width: 1fr;
 		padding: 20px;
 		text-align: center;
 		margin: 10px 0;
