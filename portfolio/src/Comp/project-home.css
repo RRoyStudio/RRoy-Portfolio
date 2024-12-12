@@ -1,0 +1,28 @@
+.project-home{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: red solid 1px;
+}
+
+.project-grid ul {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    grid-gap: 1rem;
+    margin: 1rem;
+    border: blue solid 2px;
+}
+.projects{
+    display: grid;
+    grid-template-columns: repeat(6, 3fr);
+    overflow-x: hidden ;
+    overflow: scroll;
+    grid-gap: 5rem;
+    margin: 1rem;
+    border: purple solid 2px;
+    list-style-type: none;
+    grid-column-start: span 3;  
+}
+
+.title, h2{
+    margin: 2rem;
+}
