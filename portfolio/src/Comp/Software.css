@@ -1,173 +1,17 @@
-.Software {
+.software {
     width: 100%;
+    display: grid;
+    grid-template-columns: (3, 1fr);
+    border: red 1px solid;
 }
 
 .container {
     padding: 2rem;
 }
 
-.row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    overflow: none;
-    grid-gap:1rem;
-}
-/* row heading */
-.content-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-
-/* Inner Software Section */
-.colmn {
-    margin: 1rem 0;
-    
-}
-
-.colmn-container {
-    padding: 1.5rem;
-    border-radius: 50%;
-}
-
-.software-h2 {
-    grid-column: 1 / -1;
-    margin: 1rem;
-    font-size: 3rem;
-
-}
-
-
-/* Adobe sticker  */
-
-.adobe-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    border-radius: 50%;
-    text-align: center;
-    
-}
-
-.adobe-item {
-    border: var(--primary-border-color) solid 5px;
-    padding: .5rem;
-    text-align: center;
-    border-radius: var(--border-radius);
-    font-size: 1.2rem;
-    width:fit-content;
-    background-color: transparent;
-    margin: auto;
-
-}
-
-.adobe-section{
-    border: white solid 30px;
-    width:60%;
-    border-radius: 50%;
-    padding: 2rem;
-    text-align: center; 
-    margin: auto;
-    margin-top: 200px;
-}
-
-/* development sticker */
-.dev-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    border-radius: 20%;
-    text-align: center;
-    
-}
-
-.dev-item {
-    border: var(--primary-border-color) solid 5px;
-    padding: .5rem;
-    text-align: center;
-    border-radius: var(--border-radius);
-    font-size: 1.2rem;
-    width:fit-content;
-    background-color: transparent;
-    margin: auto;
-
-}
-
-.dev-section{
-    border: white solid 30px;
-    border-radius: 20%;
-    padding: 2rem;
-    text-align: center; 
-    margin: auto;
-    margin-bottom: 200px;
-}
-
-/* design sticker */
-.design-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    border-radius: 50%;
-    
-}
-
-.design-item {
-    border: var(--primary-border-color) solid 5px;
-    padding: .5rem;
-    border-radius: var(--border-radius);
-    font-size: 1.2rem;
-    width:fit-content;
-    background-color: transparent;
-    margin: auto;
-
-}
-
-.design-section{
-    border: white solid 30px;
-    border-radius: 50%;
-    padding: 2rem;
-    text-align: center; 
-    margin: auto;
-    width: auto;
-    margin-bottom: 1px
-}
 
 
 
-/* Media Queries */
-@media screen and (max-width: 800px) {
-    .adobe-grid {
-        grid-template-columns: 1fr;
-    }
-    .row{
-        grid-template-columns: 1fr;
-        margin: auto;
-        gap:none;
-        width: auto;
-        overflow: hidden;
-    }
-
-    .section-h2 {
-        font-size: 2.5rem;
-    }
-
-    .software-h2 {
-        font-size: 2rem;
-    }
- 
-    .adobe-section {
-    margin-top: 20px;
-    border-width: 20px;
-    }
-    .dev-section {
-        width: auto;
-        border-width: 20px;
-        margin: auto; 
-    } 
-    .design-section {
-        width: auto;
-        margin:auto;
-        border-width: 20px;
-    }
 
 
-}
 

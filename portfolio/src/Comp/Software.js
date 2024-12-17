@@ -34,7 +34,8 @@ const design_tools = [
 ]; 
 
 const AdobeList = () => (
-  <div className="adobe-grid">
+  <div className="adobe">
+    <h3>Adobe Programs</h3>
     {adobe_programs.map((program) => (
       <div key={program} className="adobe-item">
         {program}
@@ -43,64 +44,10 @@ const AdobeList = () => (
   </div>
 );
 
-const DevelopmentTools = () => (
-  <div className="dev-grid">
-    {development_tools.map((tool) => (
-      <div key={tool} className="dev-item">
-        {tool}
-      </div>
-    ))}
-  </div>
-);
-
-const DesignTools = () => (
-  <div className="design-grid">
-    {design_tools.map((tool) => (
-      <div key={tool} className="design-item">
-        {tool}
-      </div>
-    ))}
-  </div>
-);
-
-
 function Software() {
-  // ContentSection component
-  const ContentSection = ({ title, children, className }) => {
-    return (
-      <div className={`colmn ${className} || ''}`}>
-        <div className="colmn-container">
-          <h2 className="software-h2">{title}</h2>
-          {children}
-        </div>
-      </div>
-    );
-  };
-
-  
   return (
-    <div className="Software">
-      <div className="container">
-      <h2 className="content-h2">Software</h2>
-        <div className="row">
-          
-          {/* Adobe sticker */}
-          <ContentSection title="Adobe" className='adobe-section'>
-            <AdobeList />
-          </ContentSection>
-
-          {/* Development sticker */}
-          <ContentSection title="Development" className='dev-section'>
-           <DevelopmentTools /> 
-          </ContentSection>
-
-          {/* Design sticker */}
-          <ContentSection title="Design" className='design-section'>
-            <DesignTools />
-          </ContentSection>
-
-        </div>
-      </div>
+    <div className="software">
+    <AdobeList />
     </div>
   );
 };
