@@ -44,10 +44,22 @@ const AdobeList = () => (
   </div>
 );
 
+const Development = () => (
+  <div className="development">
+    <h3>Languages</h3>
+    {development_tools.map((tool) => (
+      <div key={tool} className="languages">
+        {tool}
+      </div>
+    ))}
+  </div>
+)
+
 function Software() {
   return (
     <div className="software">
     <AdobeList />
+    <Development />
     </div>
   );
 };
