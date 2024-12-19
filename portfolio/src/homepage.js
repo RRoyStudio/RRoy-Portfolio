@@ -1,11 +1,10 @@
 import React from 'react';
-import './App.css';
-import PageWrapper from './Comp/PageWrapper.jsx';
-import Navbar from './Comp/Navbar';
-import Header from './Comp/home-header';
-import Software from './Comp/Software';
-import Projects from './Comp/project-home';
-import Contact from './Comp/contact-home';
+import './homepage.css';
+import Navbar from './Comp/Navbar.js';
+import Header from './Comp/home-header.js';
+import Software from './Comp/Software.js';
+import Projects from './Comp/projects.js';
+import Contact from './Comp/contact-home.js';
 import Footer from './Comp/footer.js';
 
 
@@ -14,12 +13,9 @@ function HomePage() {
     <div className="HomePage">
     
       <Navbar className="nav" />
-      <PageWrapper/>
       <Header className="header" />
       <Software className="software" />
       <Projects className="projects" />
-      <PageWrapper/>
-    
       <Footer className="footer"/>
       
     </div>

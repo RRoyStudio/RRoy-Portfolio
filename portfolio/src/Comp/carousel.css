@@ -1,0 +1,59 @@
+/* File: Carousel.css */
+.carousel-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth; /* Smooth scrolling for momentum effect */
+    scrollbar-width: none; /* Hide scrollbars (Firefox) */
+    -ms-overflow-style: none; /* Hide scrollbars (IE and Edge) */
+    display: flex;
+    scroll-snap-type: x mandatory; /* Enable horizontal snapping */
+    cursor: grab; /* Draggable cursor */
+}
+
+.carousel-container:active {
+    cursor: grabbing;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbars */
+}
+
+.carousel {
+    display: flex;
+    gap: 16px; /* Space between items */
+    padding: 16px;
+}
+
+.carousel-item {
+    scroll-snap-align: center; /* Snap each item to the center */
+    flex: 0 0 auto; /* Prevent items from shrinking */
+    text-align: center;
+    width: 350px; /* Default width for each card */
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-title {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #333;
+    display: none; /* Hide title by default */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel-item {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        width: 120px;
+    }
+}

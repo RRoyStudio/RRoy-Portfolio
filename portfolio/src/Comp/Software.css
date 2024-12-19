@@ -1,10 +1,8 @@
 .software {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    padding: 5rem;
+    padding: 3rem;
     gap: 3rem;
-    border: gray 1px solid;
     overflow: none;
 }
 
@@ -68,7 +66,7 @@
     clear: both;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
     .software {
         flex-direction: column;
         align-items: center;
