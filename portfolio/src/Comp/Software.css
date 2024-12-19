@@ -1,25 +1,88 @@
 .software {
-    width: 100%;
-    display: grid;
-    grid-template-columns: (3, 1fr);
-    border: red 1px solid;
-    grid-row: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5rem;
+    gap: 3rem;
+    border: gray 1px solid;
+    overflow: none;
 }
 
-.container {
-    padding: 2rem;
+.adobe h3,
+.development h3, .design h3 {
+    column-span: all;
+    margin-bottom: 1rem;
+    text-align: center;
+    background-color: transparent;
 }
 
-.adobe {
+.adobe,
+.development,
+.design {
     display: block;
     column-count: 2;
-    border: blue 1px solid;
+    max-width: 400px;
+    /* Adjust this value based on your needs */
+    border: 1px solid;
+    /* Keeping your colored borders */
+    padding: 1rem;
+    color: white;
+    border: 1rem solid white;
 }
 
-.development{
-    display:block;
-    column-count: 2;
+.adobe-item, .program-items, .languages{
+    background-color: transparent;
 }
 
+/* styles for each sticker */
+.adobe {
+    padding: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+    border-radius: 50%;
+    background-color: var(--color3);
+    margin-top: 5rem;
+}
+
+.development {
+    border-radius: 60%;
+    padding:5rem;
+    padding-top: 4rem;
+    background-color: var(--color2);
+    margin-bottom: 5rem;
+}
+
+.design {
+    border-radius: 30%;
+    padding:3rem;
+    padding-top: 2rem;
+    justify-content: center;
+    background-color: var(--color1);
+    margin-top: 0px;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 700px) {
+    .software {
+        flex-direction: column;
+        align-items: center;
+        width: 1fr;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .adobe, .development, .design {
+        width: 100%;
+        padding: 2rem;
+        padding-bottom: 3rem;
+        margin-bottom: 1rem;
+    }
+
+}
 
 

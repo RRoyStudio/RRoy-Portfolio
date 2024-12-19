@@ -17,7 +17,8 @@ const development_tools = [
   "Javascript",
   "PHP",
   "React",
-  "SQL"
+  "SQL",
+  "Typescript",
 ];
 
 const design_tools = [
@@ -55,11 +56,24 @@ const Development = () => (
   </div>
 )
 
+const Design = () => (
+  <div className="design">
+    <h3>Programs</h3>
+    {design_tools.map((tool) => (
+      <div key={tool} className="program-items">
+        {tool}
+      </div>
+    ))}
+  </div>
+);
+
 function Software() {
   return (
     <div className="software">
     <AdobeList />
+    <Design />
     <Development />
+    
     </div>
   );
 };
