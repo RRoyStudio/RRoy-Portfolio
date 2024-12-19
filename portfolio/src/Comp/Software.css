@@ -1,173 +1,88 @@
-.Software {
-    width: 100%;
-}
-
-.container {
-    padding: 2rem;
-}
-
-.row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.software {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5rem;
+    gap: 3rem;
+    border: gray 1px solid;
     overflow: none;
-    grid-gap:1rem;
-}
-/* row heading */
-.content-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
 }
 
-
-/* Inner Software Section */
-.colmn {
-    margin: 1rem 0;
-    
-}
-
-.colmn-container {
-    padding: 1.5rem;
-    border-radius: 50%;
-}
-
-.software-h2 {
-    grid-column: 1 / -1;
-    margin: 1rem;
-    font-size: 3rem;
-
-}
-
-
-/* Adobe sticker  */
-
-.adobe-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    border-radius: 50%;
+.adobe h3,
+.development h3, .design h3 {
+    column-span: all;
+    margin-bottom: 1rem;
     text-align: center;
-    
-}
-
-.adobe-item {
-    border: var(--primary-border-color) solid 5px;
-    padding: .5rem;
-    text-align: center;
-    border-radius: var(--border-radius);
-    font-size: 1.2rem;
-    width:fit-content;
     background-color: transparent;
-    margin: auto;
-
 }
 
-.adobe-section{
-    border: white solid 30px;
-    width:60%;
-    border-radius: 50%;
-    padding: 2rem;
-    text-align: center; 
-    margin: auto;
-    margin-top: 200px;
+.adobe,
+.development,
+.design {
+    display: block;
+    column-count: 2;
+    max-width: 400px;
+    /* Adjust this value based on your needs */
+    border: 1px solid;
+    /* Keeping your colored borders */
+    padding: 1rem;
+    color: white;
+    border: 1rem solid white;
 }
 
-/* development sticker */
-.dev-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    border-radius: 20%;
-    text-align: center;
-    
-}
-
-.dev-item {
-    border: var(--primary-border-color) solid 5px;
-    padding: .5rem;
-    text-align: center;
-    border-radius: var(--border-radius);
-    font-size: 1.2rem;
-    width:fit-content;
+.adobe-item, .program-items, .languages{
     background-color: transparent;
-    margin: auto;
-
 }
 
-.dev-section{
-    border: white solid 30px;
-    border-radius: 20%;
-    padding: 2rem;
-    text-align: center; 
-    margin: auto;
-    margin-bottom: 200px;
-}
-
-/* design sticker */
-.design-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
+/* styles for each sticker */
+.adobe {
+    padding: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
     border-radius: 50%;
-    
+    background-color: var(--color3);
+    margin-top: 5rem;
 }
 
-.design-item {
-    border: var(--primary-border-color) solid 5px;
-    padding: .5rem;
-    border-radius: var(--border-radius);
-    font-size: 1.2rem;
-    width:fit-content;
-    background-color: transparent;
-    margin: auto;
-
+.development {
+    border-radius: 60%;
+    padding:5rem;
+    padding-top: 4rem;
+    background-color: var(--color2);
+    margin-bottom: 5rem;
 }
 
-.design-section{
-    border: white solid 30px;
-    border-radius: 50%;
-    padding: 2rem;
-    text-align: center; 
-    margin: auto;
-    width: auto;
-    margin-bottom: 1px
+.design {
+    border-radius: 30%;
+    padding:3rem;
+    padding-top: 2rem;
+    justify-content: center;
+    background-color: var(--color1);
+    margin-top: 0px;
 }
 
 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
-/* Media Queries */
-@media screen and (max-width: 800px) {
-    .adobe-grid {
-        grid-template-columns: 1fr;
+@media screen and (max-width: 700px) {
+    .software {
+        flex-direction: column;
+        align-items: center;
+        width: 1fr;
+        padding-top: 0;
+        padding-bottom: 0;
     }
-    .row{
-        grid-template-columns: 1fr;
-        margin: auto;
-        gap:none;
-        width: auto;
-        overflow: hidden;
+    .adobe, .development, .design {
+        width: 100%;
+        padding: 2rem;
+        padding-bottom: 3rem;
+        margin-bottom: 1rem;
     }
-
-    .section-h2 {
-        font-size: 2.5rem;
-    }
-
-    .software-h2 {
-        font-size: 2rem;
-    }
- 
-    .adobe-section {
-    margin-top: 20px;
-    border-width: 20px;
-    }
-    .dev-section {
-        width: auto;
-        border-width: 20px;
-        margin: auto; 
-    } 
-    .design-section {
-        width: auto;
-        margin:auto;
-        border-width: 20px;
-    }
-
 
 }
+
 
