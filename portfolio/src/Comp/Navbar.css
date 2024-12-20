@@ -53,7 +53,7 @@ button {
 }
 
 .hamburger img {
-	width: 10vw;
+	width: 15vw;
 	height: auto;
 	background-color: white;
 }
@@ -124,7 +124,7 @@ button {
 }
 
 /* Media queries */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
 	
 	.nav{
 		display:flex;
@@ -133,7 +133,7 @@ button {
 	}
 	
 	.nav-colmn1 img {
-		width: 15vw;
+		width: 20vw;
 		height: auto;
 	}
 
@@ -143,31 +143,23 @@ button {
 
 	.nav ul {
 		display: none;
+		text-align: end;
 	}
 
-	li {
-		width: 1fr;
-		padding: 20px;
+	.nav li {
+		padding: 10px;
 		text-align: center;
-		margin: 10px 0;
-		border-radius: 8px;
-		background: #f8f8f8;
-		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-		transform: translateX(0);
-		transition: transform 0.3s ease, background-color 0.3s ease;
+		border-radius: 9px;
+		/* transform: translateX(0); */
+		
 		}
 	
-	li:hover {
-		background-color: #fff;
+	li::selection {
+		/* background-color: #fff; */
 		transform: translateX(10px);
 		animation: colorChange 0.3s forwards;
-		color: var(--random-color);
 	}
-	@keyframes colorChange {
-		100%{
-			color: var(--random-color);
-		}
-		}
+	
 	
 	li a {
 		display: block;

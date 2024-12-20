@@ -1,11 +1,13 @@
 .software {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     align-items: center;
     padding: 3rem;
-    gap: 3rem;
-    overflow: none;
+    gap: 20rem;
+    margin: 0 auto;
+    border : 1px solid black;
 }
-
+/* sticker headers */
 .adobe h3,
 .development h3, .design h3 {
     column-span: all;
@@ -13,13 +15,13 @@
     text-align: center;
     background-color: transparent;
 }
-
+/* Whole sticker */
 .adobe,
 .development,
 .design {
     display: block;
     column-count: 2;
-    max-width: 400px;
+    max-width: min(400px, 900vw);
     /* Adjust this value based on your needs */
     border: 1px solid;
     /* Keeping your colored borders */
@@ -27,7 +29,7 @@
     color: white;
     border: 1rem solid white;
 }
-
+/* items in the list */
 .adobe-item, .program-items, .languages{
     background-color: transparent;
 }
@@ -59,28 +61,37 @@
     margin-top: 0px;
 }
 
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 @media screen and (max-width: 768px) {
     .software {
-        flex-direction: column;
-        align-items: center;
-        width: 1fr;
-        padding-top: 0;
-        padding-bottom: 0;
+        gap: .5rem;
+        padding: 10%;
     }
     .adobe, .development, .design {
-        width: 100%;
         padding: 2rem;
-        padding-bottom: 3rem;
-        margin-bottom: 1rem;
+        padding-top: 1rem;
+        margin: 0;
+        height: fit-content;
+        font-size: 70%;
+        border-radius: 30%;
+        border: none;
+        align-items: center;
     }
 
-}
+    
+    .adobe h3, .development h3, .design h3 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+
+    .design {
+        columns: 2;
+        overflow: wrap;
+
+    }
+    
+    }
+
+
 
 
