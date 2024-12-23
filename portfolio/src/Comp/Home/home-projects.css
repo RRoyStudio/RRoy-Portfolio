@@ -1,0 +1,28 @@
+.project-home-container{
+    display: grid;
+    grid-template-columns: 30% auto;
+    background-color: transparent;
+}
+
+.project-home-container h2{
+    margin-left: 20vh;
+    margin-top: 5vh;
+    padding: 2vh;
+    font-size: 5vh;
+
+}
+
+@media (max-width: 768px) {
+    .project-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .project-container h2{
+        margin: auto;
+    }
+   
+}
+
+@media (max-width: 480px) {
+    
+    
+}

@@ -1,0 +1,73 @@
+.contact-home {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    margin: 0 auto;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    background-color: transparent;
+}
+
+.contactInfo{
+    margin: 5rem;
+    width: fit-content;
+    margin-left: 30vh;
+    
+}
+
+.contactInfo-text{
+    border: white solid 20px;
+    width: fit-content;
+    padding: 5vh;
+    border-radius: 20%;
+    background-color: var(--color1);
+}
+
+
+
+.contactInfo-text li, .contactInfo-text ul{
+    list-style: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 3vh;
+    background-color: transparent;
+    color: white;
+}
+
+.contactInfo-text a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    transition: transform 0.3s ease;
+}
+
+.contactInfo-text a:hover {
+    
+    text-decoration: underline;
+    text-decoration-color: var(--color3);
+    transform: scale(0.9);
+}
+
+.contactInfo-text li h3{
+    padding:0;
+    margin: 0;
+    background-color: transparent;
+}
+
+.imageOfMe{
+    width:100%;
+    height: 100%;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+.imageOfMe img{
+    object-fit: contain ;
+    height: 75vh;
+}
+
+
+
